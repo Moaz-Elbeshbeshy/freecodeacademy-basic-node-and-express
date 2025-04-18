@@ -4,11 +4,10 @@ let app = express();
 // Log 'Hello World' to the console
 console.log('Hello World');
 
-// Use dynamic port from the environment or default to 3000
-const port = process.env.PORT || 3000;
+// Use dynamic port from the environment or default to 5000
+const port = process.env.PORT || 5000;
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-});
+// Start the server without logging any default messages
+app.listen(port, () => { });  // Remove any callback to suppress default log
 
 module.exports = app;
